@@ -1,5 +1,5 @@
 {
-  "name": "@camellia/shared-types",
+  "name": "@camellia-letter/shared-types",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
