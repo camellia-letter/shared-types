@@ -1,6 +1,6 @@
 {
   "name": "@camellia-letter/shared-types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -30,6 +30,6 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "typescript": "^5.3.3"
+    "typescript": "^5.9.3"
   }
 }

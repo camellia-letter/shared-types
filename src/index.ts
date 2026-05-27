@@ -1,23 +1,23 @@
 // Common types
-export * from './common.js';
+export * from './common';
 
 // Error types
-export * from './error.js';
+export * from './error';
 
 // Guestbook types
-export * from './guestbook.js';
+export * from './guestbook';
 
 // Invitation types
-export * from './invitation.js';
+export * from './invitation';
 
 // Print invitation types
-export * from './print-invitation.js';
+export * from './print-invitation';
 
 // RSVP types
-export * from './rsvp.js';
+export * from './rsvp';
 
 // User types
-export * from './user.js';
+export * from './user';
 
 // Schemas
-export * from './schemas/index.js';
+export * from './schemas/index';
