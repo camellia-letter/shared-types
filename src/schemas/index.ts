@@ -145,6 +145,7 @@ const MapBlockDataSchema = z
     lng: z.number().optional(),
     venue: z.string().optional(),
     venueAddress: z.string().optional(),
+    destinationName: z.string().optional(),
   })
   .passthrough();
 const GalleryBlockDataSchema = z
