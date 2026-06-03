@@ -91,6 +91,7 @@ export interface InvitationTheme {
 export type BlockType =
   | 'HEADER' // 헤더 (신랑 & 신부 이름)
   | 'HERO' // 메인 이미지
+  | 'WEDDING_SUMMARY' // 예식 요약
   | 'MESSAGE' // 인사말
   | 'INFO' // 예식 정보
   | 'PARENTS' // 부모님 성함
@@ -99,7 +100,8 @@ export type BlockType =
   | 'GUESTBOOK' // 방명록
   | 'ACCOUNT' // 계좌 정보
   | 'TRANSPORT' // 교통 안내
-  | 'RSVP'; // 참석 여부
+  | 'RSVP' // 참석 여부
+  | 'SNAP_UPLOAD'; // 스냅 업로드
 
 // Header 블록 데이터 타입
 export interface HeaderBlockData {
@@ -169,6 +171,11 @@ export interface InfoBlockData {
   venueAddress?: string;
 }
 
+// Wedding Summary 블록 데이터 타입
+export interface WeddingSummaryBlockData {
+  // 기본 정보에서 자동으로 표시
+}
+
 // Parents 블록 데이터 타입
 export interface ParentsBlockData {
   groomFatherName?: string;
@@ -205,10 +212,17 @@ export interface RsvpBlockData {
   showGuestCount?: boolean; // 동반 인원 입력 표시 여부
 }
 
+// SnapUpload 블록 데이터 타입
+export interface SnapUploadBlockData {
+  title?: string; // 섹션 타이틀
+  description?: string; // 안내 문구
+}
+
 /** BlockType → 블록 데이터 타입 매핑 */
 export interface BlockDataByType {
   HEADER: HeaderBlockData;
   HERO: HeroBlockData;
+  WEDDING_SUMMARY: WeddingSummaryBlockData;
   MESSAGE: MessageBlockData;
   INFO: InfoBlockData;
   PARENTS: ParentsBlockData;
@@ -218,6 +232,7 @@ export interface BlockDataByType {
   ACCOUNT: AccountBlockData;
   TRANSPORT: TransportBlockData;
   RSVP: RsvpBlockData;
+  SNAP_UPLOAD: SnapUploadBlockData;
 }
 
 /** Discriminated union — switch(block.type)으로 block.data 자동 narrowing */
